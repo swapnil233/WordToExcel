@@ -93,7 +93,7 @@ id | summary | description | program | tag | person | comments | technical name 
 '''
 
 # Headers
-worksheet.append(["ID", "Summary", "Description", "Program", "Tag", "Person", "Comments", "Technical Name", "Source"])
+worksheet.append(["ID", "Summary", "Description", "Program", "Tag", "Person", "Our comments/questions", "Technical name", "Source"])
 
 # Bold headers
 for cell in worksheet["1:1"]:
@@ -125,12 +125,12 @@ def write_to_excel(cleaned_tags : list, cleaned_descriptions : list, program : s
     
     for i in range(len(cleaned_tags)):
         
-        current_id = "K" + str(i+1)
+        current_id = "L" + str(i+1)
         summary = ""
         description = cleaned_descriptions[i]
         tag = cleaned_tags[i]
         comments = ""
-        technical_name = "[" + current_id + "]"
+        technical_name = ""
         source = ""
         
         # Append the row to the excel file
